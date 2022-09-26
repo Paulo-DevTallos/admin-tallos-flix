@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
 import Overview from '../views/Overview.vue'
+import DashboardLayout from '../components/layout/DashboardLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +19,7 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'Overview',
-      component: Overview,
+      component: DashboardLayout,
       children: [
         {
           path: 'overview',
