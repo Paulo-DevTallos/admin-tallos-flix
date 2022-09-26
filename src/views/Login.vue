@@ -29,7 +29,24 @@
         </div>
       </div>
     </div>
-    <div class="size-box">
+    <div class="size-box form-content">
+      <div class="form-user">
+        <form>
+          <div class="form-title">
+            <h2>Área do Admin</h2>
+          </div>
+          <div>
+            <div>
+              <label for="email">E-mail</label>
+              <input type="text" id="email" placeholder="meuemail@example.com">
+            </div>
+            <div>
+              <label for="passwrod">Senha</label>
+              <input type="password" id="password" placeholder="Digite sua senha">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>  
   </div>
 </template>
@@ -127,6 +144,35 @@ export default {
 .login-area .login:hover {
   background-color: #00789f;
   border-radius: 10px;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-user {
+  background-color: #c9d2ff;
+  color: #121212;
+  padding: 50px 60px;
+  border-radius: 15px;
+  width: 400px;
+  position: fixed;
+  animation: blow .7s ease-in-out;
+}
+
+.form-user .form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-user input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #808070;
+  margin-bottom: 10px;
 }
 
 </style>
