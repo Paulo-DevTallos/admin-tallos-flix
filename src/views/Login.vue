@@ -96,8 +96,8 @@ export default {
       this.hiddenAdmin = !this.hiddenAdmin
     },
 
-    handleSubmitLogin() {
-      console.log('teste')
+    async handleSubmitLogin() {
+      await this.$store.dispatch('handleSubmitLogin', this.user)
     }
   }
 }
