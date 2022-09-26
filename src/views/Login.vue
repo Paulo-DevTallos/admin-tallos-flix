@@ -21,7 +21,8 @@
         class="login-area"
         v-if="displayModalForm"
       >
-        <div class="login" @click="toggleUser">
+        <!-- botao de usuario ainda desabilitado -->
+        <div class="login" @click="toggleUser" style="display: none;">
           (i) Área do usuário
         </div>
         <div class="login" @click="toggleAdmin">
@@ -30,7 +31,7 @@
       </div>
     </div>
     <div class="size-box form-content">
-      <div class="form-user">
+      <div class="form-user" v-if="hiddenAdmin">
         <form>
           <div class="form-title">
             <h2>Área do Admin</h2>
@@ -38,12 +39,21 @@
           <div>
             <div>
               <label for="email">E-mail</label>
-              <input type="text" id="email" placeholder="meuemail@example.com">
+              <div class="input-type">
+                <font-awesome-icon :icon="['fas', 'envelope']" />
+                <input type="text" id="email" placeholder="meuemail@example.com">
+              </div>
             </div>
             <div>
               <label for="passwrod">Senha</label>
-              <input type="password" id="password" placeholder="Digite sua senha">
+              <div class="input-type">  
+                <font-awesome-icon :icon="['fas', 'lock']" />
+                <input type="password" id="password" placeholder="Digite sua senha">
+              </div>
             </div>
+            <button type="submit">
+              Fazer login
+            </button>
           </div>
         </form>
       </div>
@@ -58,6 +68,7 @@ export default {
     return {
       showLoginBtn: true,
       displayModalForm: false,
+      hiddenAdmin: false,
     }
   },
 
@@ -66,6 +77,10 @@ export default {
       this.displayModalForm = true;
       this.showLoginBtn = false;
     },
+
+    toggleAdmin() {
+      this.hiddenAdmin = !this.hiddenAdmin
+    }
   }
 }
 </script>
@@ -162,17 +177,63 @@ export default {
   animation: blow .7s ease-in-out;
 }
 
+@keyframes blow {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.0);
+    position: fixed;
+    top: 50%;
+    right: -100%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .form-user .form-title {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.form-user input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #808070;
-  margin-bottom: 10px;
+.input-type input {
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  width: 90%;
+  margin-left: 5px;
 }
 
+.form-user .input-type {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #808070;
+  margin-bottom: 7px;
+}
+
+.form-user button {
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #009acc;
+  border-radius: 7px;
+  background: #009acc;
+  color: #fff; 
+  transition: .4s ease;
+}
+
+.form-user button:hover {
+  background-color: #00789f;
+  border: 1px solid #00789f;
+  box-shadow: -2px -2px 3px #056f92c4;
+}
 </style>
