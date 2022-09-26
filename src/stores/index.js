@@ -29,8 +29,8 @@ export const store = createStore({
           }
         }
 
-        console.log(res.data)
         context.commit('authLogin', res.data)
+        window.location.replace('/admin/overview')
       })
     }
   },
