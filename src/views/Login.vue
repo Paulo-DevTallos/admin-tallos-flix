@@ -32,7 +32,7 @@
     </div>
     <div class="size-box form-content">
       <div class="form-user" v-if="hiddenAdmin">
-        <form>
+        <form @submit.prevent="handleSubmitLogin">
           <div class="form-title">
             <h2>Área do Admin</h2>
           </div>
@@ -41,14 +41,24 @@
               <label for="email">E-mail</label>
               <div class="input-type">
                 <font-awesome-icon :icon="['fas', 'envelope']" />
-                <input type="text" id="email" placeholder="meuemail@example.com">
+                <input 
+                  type="text" 
+                  v-model="user.email" 
+                  id="email" 
+                  placeholder="meuemail@example.com" 
+                />
               </div>
             </div>
             <div>
               <label for="passwrod">Senha</label>
               <div class="input-type">  
                 <font-awesome-icon :icon="['fas', 'lock']" />
-                <input type="password" id="password" placeholder="Digite sua senha">
+                <input 
+                  type="password" 
+                  v-model="user.password"
+                  id="password" 
+                  placeholder="Digite sua senha" 
+                />
               </div>
             </div>
             <button type="submit">
@@ -69,6 +79,10 @@ export default {
       showLoginBtn: true,
       displayModalForm: false,
       hiddenAdmin: false,
+      user: {
+        email: '',
+        password: '',
+      }
     }
   },
 
@@ -80,6 +94,10 @@ export default {
 
     toggleAdmin() {
       this.hiddenAdmin = !this.hiddenAdmin
+    },
+
+    handleSubmitLogin() {
+      console.log('teste')
     }
   }
 }
