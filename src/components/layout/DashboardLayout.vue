@@ -5,7 +5,9 @@
       <div>
         navbar
       </div>
-      <Content />
+			<div>
+				<Content />
+			</div>
       <div>
         footer
       </div>
@@ -14,7 +16,7 @@
 </template>
 <script>
 import SideBar from '../sidebar-plugin/SideBar.vue';
-import Content from './Content.vue';  
+import Content from './Content.vue';
 
 export default {
     name: "DashboardLayout",
@@ -27,7 +29,6 @@ export default {
   justify-content: space-between;
   height: 100vh;
   width: 100%;
-  background: yellow;
 }
 
 .wrapper .main-painel {
