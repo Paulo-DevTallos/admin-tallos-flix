@@ -1,6 +1,6 @@
 <template>
-	<nav>
-		<ul>
+	<nav class="nav-links-sidebar">
+		<ul class="menu-links">
 			<li v-for="item in dataLinks" :key="item.id">
 				<router-link :to="{ path: `${item.router}` }">
 					<font-awesome-icon :icon="['fas', `${item.icon}`]" />

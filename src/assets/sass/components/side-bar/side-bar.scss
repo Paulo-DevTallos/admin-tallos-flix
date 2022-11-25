@@ -3,18 +3,61 @@
 	margin: 15px;
 	border-radius: 15px;
 	min-height: 96vh;
-	filter: drop-shadow(-2px 5px 25px rgb(149, 149, 149));
+	filter: drop-shadow(-2px 5px 25px rgba(149, 149, 149, 0.681));
 	padding: 15px;
 
 	.logo-sidebar {
 		filter: drop-shadow(0 0 0.7px #fff);
 		@include alignment-items(flex,center,center);
-		border-bottom: 1px solid rgb(44, 44, 44);
+		border-bottom: 1px solid rgba(96, 96, 96, 0.575);
 		cursor: pointer;
 
 		img {
 			width: 200px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+//sidebar-links
+.nav-links-sidebar {
+	margin: 15px 0;
+
+	.menu-links {
+		@include alignment-items(flex, center, center);
+		flex-direction: column;
+
+		li {
+			color: #fff;
+			width: 100%;
 			margin: 5px;
+			border-radius: 6px;
+			transition: .3s ease-in-out;
+
+			&:hover {
+				background-color: #0099cc27;
+			}
+
+			a {
+				@include alignment-items(flex, flex-start, center);
+				padding: 15px;
+				display: flex;
+				transition: .1s ease-in-out;
+
+				&:active {
+					border-radius: 6px;
+					background-color: #009acc;
+				}
+
+				&:focus, &:visited {
+					border-radius: 6px;
+					background-color: #009acc;
+				}
+
+				svg {
+					margin-right: 10px;
+				}
+			}
 		}
 	}
 }
