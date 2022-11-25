@@ -1,0 +1,46 @@
+.card-dash {
+	width: 25%;
+	margin: 0 15px;
+	background-color: #fff;
+	border-radius: 10px;
+	height: 130px;
+	filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.082));
+
+	.title-infos {
+		position: relative;
+
+		.card-icon {
+			width: 70px;
+			height: 70px;
+			border-radius: $default-ui-border-radius;
+			background-image: linear-gradient(to left, #009acc, #1d7b9b);
+			@include alignment-items(flex, center, center);
+			filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.289));
+			position: absolute;
+			top: -10px;
+			left: 10px;
+			color: #fff;
+			font-size: 16px;
+		}
+
+		.card-dash-data {
+			text-align: end;
+			height: 100%;
+			width: 60%;
+			float: right;
+			padding: 15px;
+			color: #65637b;
+
+			h6 {
+				font-size: 18px;
+				font-weight: $font-weight-300;
+				margin-bottom: 10px;
+			}
+
+			span {
+				font-weight: $font-weight-700;
+				font-size: 27px;
+			}
+		}
+	}
+}
