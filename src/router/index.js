@@ -34,6 +34,11 @@ const router = createRouter({
 					path: 'comments',
 					name: 'Comments',
 					component: () => import('../views/CommentsReports/index.vue'),
+				},
+				{
+					path: 'sessions',
+					name: 'Sessions',
+					component: () => import('../views/Sessions/index.vue'),
 				}
       ]
     }
