@@ -1,14 +1,12 @@
 <template>
-	<div>
-		{{ text_description }}
-	</div>
+	<p>{{ typography_text }}</p>
 </template>
 
 <script>
 export default {
 	name: 'Typography',
 	props: {
-		text_description: { type: String },
+		typography_text: { type: String },
 	},
 }
 </script>
