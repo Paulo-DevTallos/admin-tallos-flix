@@ -11,11 +11,6 @@ const router = createRouter({
       component: Login
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
-    },
-    {
       path: '/admin',
       name: 'Overview',
       component: () => import('../components/layout/DashboardLayout.vue'),
@@ -24,7 +19,17 @@ const router = createRouter({
           path: 'overview',
           name: 'Overview',
           component: Overview,
-        }
+        },
+				{
+					path: 'users',
+					name: 'User',
+					component: () => import('../views/UserReports/index.vue'),
+				},
+				{
+					path: 'movies',
+					name: 'Movies',
+					component: () => import('../views/MoviesReports/index.vue'),
+				}
       ]
     }
   ]
