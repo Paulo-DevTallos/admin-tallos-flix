@@ -11,4 +11,10 @@ export default [
 		icon: 'video',
 		description: 'Filmes',
 	},
+	{
+		id: 2,
+		router: '/admin/comments',
+		icon: 'comment',
+		description: 'Comentários',
+	},
 ]
