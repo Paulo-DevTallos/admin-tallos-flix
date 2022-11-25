@@ -3,9 +3,10 @@
 	margin: 15px;
 	border-radius: 15px;
 	min-height: 96vh;
+	filter: drop-shadow(-2px 5px 25px rgb(149, 149, 149));
+	padding: 15px;
 
 	.logo-sidebar {
-		margin: 15px;
 		filter: drop-shadow(0 0 0.7px #fff);
 		@include alignment-items(flex,center,center);
 		border-bottom: 1px solid rgb(44, 44, 44);
