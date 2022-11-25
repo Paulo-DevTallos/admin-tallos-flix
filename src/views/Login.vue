@@ -2,22 +2,30 @@
   <div class="bg-login">
     <div class="size-box size-info">
       <div>
-        <img src="/img/TallosFlix-removebg-preview.png" alt="Logo TalloFlix">
+        <img src="/img/logo-tallosflix.png" alt="Logo TalloFlix">
       </div>
-      <div class="title">
-        <h1>Bem-vindo(a) ao TallosFlix</h1>
-        <p>Aproveite o melhor de filmes e series exclusivos na plataforma TallosFlix. Tenha o melhor de críticas e comentários do cinema mundial nas suas mãos!</p>
-      </div>
-      <div>
-        <button 
-          class="btn-login"
-          @click="showLoginDisplay"
-          v-if="showLoginBtn"
-        >
-          Faça Login
-        </button>
-      </div>
-      <div 
+			<div class="login-section">
+				<div class="title">
+					<h1>Bem-vindo(a) ao TallosFlix</h1>
+					<p>Aproveite o melhor de filmes e series exclusivos na plataforma TallosFlix. Tenha o melhor de críticas e comentários do cinema mundial nas suas mãos!</p>
+
+					<!--<div class="input-styles">
+						<input type="text" placeholder="teste">
+						<font-awesome-icon :icon="['fas', 'eye']"/>
+					</div>-->
+
+				</div>
+				<div>
+					<button
+						class="btn-login"
+						@click="showLoginDisplay"
+						v-if="showLoginBtn"
+					>
+						Faça seu Login
+					</button>
+				</div>
+			</div>
+      <div
         class="login-area"
         v-if="displayModalForm"
       >
@@ -41,23 +49,23 @@
               <label for="email">E-mail</label>
               <div class="input-type">
                 <font-awesome-icon :icon="['fas', 'envelope']" />
-                <input 
-                  type="text" 
-                  v-model="user.email" 
-                  id="email" 
-                  placeholder="meuemail@example.com" 
+                <input
+                  type="text"
+                  v-model="user.email"
+                  id="email"
+                  placeholder="meuemail@example.com"
                 />
               </div>
             </div>
             <div>
               <label for="passwrod">Senha</label>
-              <div class="input-type">  
+              <div class="input-type">
                 <font-awesome-icon :icon="['fas', 'lock']" />
-                <input 
-                  type="password" 
+                <input
+                  type="password"
                   v-model="user.password"
-                  id="password" 
-                  placeholder="Digite sua senha" 
+                  id="password"
+                  placeholder="Digite sua senha"
                 />
               </div>
             </div>
@@ -67,7 +75,7 @@
           </div>
         </form>
       </div>
-    </div>  
+    </div>
   </div>
 </template>
 
@@ -104,6 +112,30 @@ export default {
 </script>
 
 <style scoped>
+
+.input-styles {
+  display: flex;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+.input-styles input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.input-styles svg {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .bg-login {
   background-image: url(/img/bg-movie.png);
   background-repeat: no-repeat;
@@ -133,6 +165,10 @@ export default {
 .size-info img {
   filter: drop-shadow(0 0 1px #fff);
   width: 300px;
+}
+
+.size-info .login-section {
+	padding-left: 3.75%;
 }
 
 .size-info .btn-login {
@@ -245,7 +281,7 @@ export default {
   border: 1px solid #009acc;
   border-radius: 7px;
   background: #009acc;
-  color: #fff; 
+  color: #fff;
   transition: .4s ease;
 }
 
