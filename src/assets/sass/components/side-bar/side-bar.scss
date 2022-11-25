@@ -1,0 +1,19 @@
+.tool-sidebar {
+	background-image: linear-gradient(to right, #121212 20%, #282727);
+	margin: 15px;
+	border-radius: 15px;
+	min-height: 96vh;
+
+	.logo-sidebar {
+		margin: 15px;
+		filter: drop-shadow(0 0 0.7px #fff);
+		@include alignment-items(flex,center,center);
+		border-bottom: 1px solid rgb(44, 44, 44);
+		cursor: pointer;
+
+		img {
+			width: 200px;
+			margin: 5px;
+		}
+	}
+}

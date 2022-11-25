@@ -1,23 +1,25 @@
 <template>
   <div class="sidebar">
-    <div>
-      <img src="" alt="">
-    </div>
-    <div>
-      <router-link to="/">
-        teste
-      </router-link>
-    </div>
+		<div class="tool-sidebar">
+			<div class="logo-sidebar">
+				<img src="/img/logo-tallosflix.png" alt="logo tallosflix">
+			</div>
+			<div>
+				<router-link to="/">
+					teste
+				</router-link>
+			</div>
+		</div>
   </div>
 </template>
 <script>
 export default {
   name: 'SideBar'
-}  
+}
 </script>
 <style>
 .sidebar {
-  background-color: red;
+
   height: 100vh;
   width: 20%;
 }
