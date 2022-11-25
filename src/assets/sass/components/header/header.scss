@@ -1,0 +1,28 @@
+.header {
+	margin: 15px 15px 0 0;
+	border-radius: $default-ui-border-radius;
+	padding: 15px 20px;
+	background-color: #fff;
+	color: #646464;
+	font-weight: 700;
+	@include alignment-items(flex, space-between, center);
+
+	.typograph-config {
+		font-weight: $font-weight-400;
+	}
+}
+
+.logout-btn {
+	background-color: transparent;
+	border: 2px solid #009acc;
+	padding: 5px 14px;
+	border-radius: $default-ui-border-radius;
+	cursor: pointer;
+	color: #009acc;
+	transition: .4s ease-in-out;
+
+	&:hover {
+		background-color: #009acc;
+		color: #fff;
+	}
+}

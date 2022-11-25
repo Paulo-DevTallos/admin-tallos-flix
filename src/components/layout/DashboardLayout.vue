@@ -3,7 +3,7 @@
     <side-bar />
     <div class="main-painel">
       <div>
-        navbar
+				<Header />
       </div>
 			<div>
 				<Content />
@@ -15,12 +15,13 @@
   </div>
 </template>
 <script>
+import Header from '../Headers/Header.vue';
 import SideBar from '../sidebar-plugin/SideBar.vue';
 import Content from './Content.vue';
 
 export default {
     name: "DashboardLayout",
-    components: { Content, SideBar }
+    components: { Content, SideBar, Header }
 }
 </script>
 <style scoped>
