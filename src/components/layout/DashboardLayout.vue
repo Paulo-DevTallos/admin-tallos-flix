@@ -29,10 +29,10 @@ export default {
   justify-content: space-between;
   height: 100vh;
   width: 100%;
+	background-color: #f5f5f3;
 }
 
 .wrapper .main-painel {
-  background-color: blue;
   width: 80%;
 }
 </style>

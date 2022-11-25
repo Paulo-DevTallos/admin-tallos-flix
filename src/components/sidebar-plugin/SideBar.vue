@@ -5,16 +5,17 @@
 				<img src="/img/logo-tallosflix.png" alt="logo tallosflix">
 			</div>
 			<div>
-				<router-link to="/">
-					teste
-				</router-link>
+				<SideBarLinks />
 			</div>
 		</div>
   </aside>
 </template>
 <script>
+import SideBarLinks from './SideBarLinks.vue';
+
 export default {
-  name: 'SideBar'
+    name: "SideBar",
+    components: { SideBarLinks }
 }
 </script>
 <style>
