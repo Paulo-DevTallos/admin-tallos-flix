@@ -1,8 +1,9 @@
+//base setup
+@import './partials/base';
+@import './partials/variables';
+@import './partials/mixins/mixins-structure';
+
 //components structure
 @import './components/forms/form-login.scss';
 @import './components/buttons/main-button.scss';
-
-//base setup
-@import './partials/base';
-@import './partials/mixins/mixins-structure';
 
