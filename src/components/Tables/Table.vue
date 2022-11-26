@@ -1,20 +1,18 @@
 <template>
 	<div class="table-container">
 		<HeaderTable :columns="table.column" />
-		<ul>
-			<ListUser />
-			<ListUser />
-			<ListUser />
-			<ListUser />
-			<ListUser />
-		</ul>
+		<div class="scroll-table">
+			<ul>
+				<ListUser />
+			</ul>
+		</div>
 	</div>
 </template>
 
 <script>
 import HeaderTable from "./HeaderTable.vue";
 import ListUser from "./ListUser.vue";
-const column = ['Avatar', 'Nome', 'E-mail', 'Criado em']
+const column = ['Avatar', 'Nome', 'E-mail', 'Criado em', 'Acoes']
 
 export default {
 	name: "Table",

@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<ul>
+		<ul class="header-table">
 			<li v-for="column in columns" :key="column">{{ column }}</li>
 		</ul>
 	</header>
