@@ -2,6 +2,7 @@
 @import './partials/base';
 @import './partials/variables';
 @import './partials/mixins/mixins-structure';
+@import'./partials/template';
 
 //components structure
 @import './components/forms/form-login.scss';
@@ -9,6 +10,11 @@
 @import './components/side-bar/side-bar.scss';
 @import './components/header/header.scss';
 @import './components/dash-info/dash-info.scss';
+@import './components/tables/header-table.scss';
+@import './components/tables/table.scss';
+@import './components/tables/list-table.scss';
+@import './components/footer/footer.scss';
 
 //pages
 @import './pages/overview.scss';
+@import './pages/users-report.scss';

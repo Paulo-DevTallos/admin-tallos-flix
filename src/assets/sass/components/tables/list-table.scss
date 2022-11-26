@@ -1,0 +1,24 @@
+.list-user {
+	padding: 20px;
+	background-color: #fff;
+	margin: 2px 0;
+	border-radius: $default-ui-border-radius;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.spacing {
+		width: 100px;
+		width: 22%;
+	}
+
+	.avatar {
+		padding: 10px;
+		width: 50px;
+		height: 50px;
+		background-color: gray;
+		border-radius: $default-ui-border-radius;
+		@include alignment-items(flex, center, center);
+	}
+}
+
