@@ -2,7 +2,9 @@
   <aside class="sidebar">
 		<div class="tool-sidebar">
 			<div class="logo-sidebar">
-				<img src="/img/logo-tallosflix.png" alt="logo tallosflix">
+				<router-link :to="{ path: '/admin/overview' }">
+					<img src="/img/logo-tallosflix.png" alt="logo tallosflix">
+				</router-link>
 			</div>
 			<div>
 				<SideBarLinks />
