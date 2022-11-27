@@ -40,6 +40,7 @@ export default {
 		listAllPaginateUsers()  {
 			userRequest.listPaginateUsers().then(res => {
 				this.users = res.data
+				console.log(res.data)
 			})
 		}
 	},

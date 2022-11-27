@@ -1,0 +1,19 @@
+.search-bar-container {
+	margin: 15px 11px 0 12px;
+	border-radius: $default-ui-border-radius;
+	padding: 15px 20px;
+	background-color: $main-white-color;
+	@include alignment-items(flex, flex-start, center);
+
+	form {
+		@include alignment-items(flex, flex-start, center);
+
+		.input-search {
+			height: 35px;
+			border-radius: 6px;
+			width: 300px;
+			border: 1px solid gray;
+			padding: 0 12px;
+		}
+	}
+}

@@ -2,7 +2,7 @@
 	<header class="header">
 		<div class="user-info">
 			<div>
-				<p>Nome do Usuário</p>
+				<p> Seja bem vindo, {{ $store.state.userStore.userName.split(' ').slice(0, 2).toString().replace(',', ' ') }}</p>
 			</div>
 			<div>
 				<Typography class="typograph-config">

@@ -54,8 +54,8 @@ export default {
 		toggleAdmin() {
 			this.hiddenFormAdmin = !this.hiddenFormAdmin;
 		},
-		handleSubmitLogin(user) {
-			//await this.$store.dispatch("handleSubmitLogin", this.user);
+		async handleSubmitLogin(user) {
+			await this.$store.dispatch('userStore/login', user);
 		},
 	},
 };
