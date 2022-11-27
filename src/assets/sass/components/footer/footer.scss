@@ -1,0 +1,9 @@
+.footer {
+	background-color: $main-white-color;
+	margin-right: 15px;
+	padding: 15px 20px;
+	height: 8.5vh;
+	border-radius: $default-ui-border-radius;
+	@include alignment-items(flex, flex-start, center);
+	color: $main-font-color;
+}

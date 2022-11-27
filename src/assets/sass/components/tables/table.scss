@@ -1,0 +1,12 @@
+.table-container {
+	margin-top: 3px;
+	border-radius: $default-ui-border-radius;
+	padding: 10px;
+	color: $main-font-color;
+
+	.scroll-table {
+		margin-top: 10px;
+		overflow-y: auto;
+		height: 52.5vh;
+	}
+}

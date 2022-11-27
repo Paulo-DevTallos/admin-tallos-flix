@@ -1,0 +1,9 @@
+.bg-header {
+	background-image: linear-gradient(to left, #009acc, #0081ac);
+	filter: drop-shadow(0 5px 3px #0081ac3f);
+	color: #fff;
+	font-weight: $font-weight-500;
+	border-radius: $default-ui-border-radius;
+	padding: 20px;
+	font-size: 1.2rem;
+}

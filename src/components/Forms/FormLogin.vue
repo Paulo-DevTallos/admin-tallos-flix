@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import BaseInput from "../../assets/sass/components/Inputs/BaseInput.vue";
+import BaseInput from "../Inputs/BaseInput.vue";
 import MainButton from "../Buttons/MainButton.vue";
 import Typography from "../Typography/Typography.vue";
 

@@ -1,9 +1,5 @@
-main {
-	margin: 15px 15px 15px 0;
-	border-radius: $default-ui-border-radius;
+.card-dash-container {
+	@include alignment-items(flex, space-between, unset);
 	padding: 15px 0;
-
-	.card-dash-container {
-		@include alignment-items(flex, space-between, center);
-	}
+	min-height: 50vh;
 }

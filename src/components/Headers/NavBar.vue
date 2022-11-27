@@ -1,6 +1,6 @@
 <template>
 	<nav>
-		<div class="logout-btn">
+		<div @click="logout" class="logout-btn">
 			<span>Logout</span>
 		</div>
 	</nav>
@@ -9,5 +9,12 @@
 <script>
 export default {
 	name: 'NavBar',
+	methods: {
+		logout() {
+			localStorage.clear()
+
+			this.$router.push('/login')
+		}
+	}
 }
 </script>
