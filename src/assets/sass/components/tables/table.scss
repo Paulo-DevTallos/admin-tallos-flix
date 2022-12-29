@@ -6,7 +6,13 @@
 
 	.scroll-table {
 		margin-top: 10px;
-		overflow-y: auto;
-		height: 52.5vh;
+		height: 50vh;
+
+		.list-users {
+			overflow-y: auto;
+			background-color: #fff;
+			border-radius: 8px;
+			height: 100%;
+		}
 	}
 }
