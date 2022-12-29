@@ -2,7 +2,19 @@
 	<header class="header">
 		<div class="user-info">
 			<div>
-				<p> Seja bem vindo, {{ $store.state.userStore.userName.split(' ').slice(0, 2).toString().replace(',', ' ') }}</p>
+				<p>
+					Seja bem vindo,
+					{{
+						$store.state.userStore.userName
+							.split(" ")
+							.slice(0, 2)
+							.toString()
+							.replace(",", " ")
+					}}
+				</p>
+			</div>
+			<div>
+				<strong>{{ $store.state.userStore.routerName }}</strong>
 			</div>
 			<div>
 				<Typography class="typograph-config">
