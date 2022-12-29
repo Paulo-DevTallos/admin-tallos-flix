@@ -29,13 +29,14 @@ export default {
 .wrapper {
 	display: flex;
 	justify-content: space-between;
-	min-height: 100vh;
 	width: 100%;
+	padding-bottom: 30px;
 	/*background-color: #cecece;*/
 	background-color: #f5f5f3;
 }
 
 .wrapper .main-painel {
 	width: 80%;
+	min-height: 100vh;
 }
 </style>
