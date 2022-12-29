@@ -5,7 +5,7 @@
 				<font-awesome-icon :icon="['fas', `${icon}`]" />
 			</div>
 			<div class="card-dash-data">
-				<h6>Usuários ativos na plataforma</h6>
+				<h6>{{ description_card }}</h6>
 				<span>250</span>
 			</div>
 		</div>
@@ -17,6 +17,10 @@ export default {
 	name: "DashInfo",
 	props: {
 		icon: {
+			type: String,
+			required: true,
+		},
+		description_card: {
 			type: String,
 			required: true,
 		},
