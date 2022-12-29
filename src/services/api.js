@@ -1,8 +1,9 @@
-import axios from 'axios'
+import axios from "axios";
+const URL_API = import.meta.VITE_URL_API;
 
 export const api = axios.create({
-	baseURL: `http://localhost:3003`,
+	baseURL: URL_API,
 	headers: {
-		Authorization: `Bearer ${localStorage.getItem('token')}`
-	}
-})
+		Authorization: `Bearer ${localStorage.getItem("token")}`,
+	},
+});
