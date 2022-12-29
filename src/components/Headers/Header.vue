@@ -17,7 +17,7 @@
 				<strong>{{ $store.state.userStore.routerName }}</strong>
 			</div>
 		</div>
-		<div class="avatar-container" @click="callCardProfile">
+		<div class="avatar-container" @click="callCardProfile" ref="myref">
 			<span> P </span>
 		</div>
 		<CardProfile
@@ -45,6 +45,15 @@ export default {
 		closeCardProfile() {
 			this.isActive = false;
 		},
+	},
+
+	mounted() {
+		const self = this.$refs.myref;
+		document.addEventListener("click", (e) => {
+			if (self !== undefined && self.contains(e.target) === false) {
+				this.isActive = false;
+			}
+		});
 	},
 };
 </script>
