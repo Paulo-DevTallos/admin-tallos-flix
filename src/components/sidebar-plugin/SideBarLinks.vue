@@ -3,18 +3,12 @@
 		<ul class="menu-links">
 			<li v-for="item in dataLinks" :key="item.id">
 				<router-link
-					v-if="this.$store.state.userStore.routerName !== item.description"
 					:to="{ path: `${item.router}` }"
+					:class="{
+						activeItemSidebar:
+							pathRouterName === item.description ? isActive : isInactive,
+					}"
 					@click="pickRoute(item.description)"
-					><!-- EVENTO DE CLICK É REFERENTE A ROTA CLICADA! -->
-					<font-awesome-icon :icon="['fas', `${item.icon}`]" />
-					<p>{{ item.description }}</p>
-				</router-link>
-				<router-link
-					v-else
-					:to="{ path: `${item.router}` }"
-					@click="pickRoute(item.description)"
-					class="isActiveItemSidebar"
 					><!-- EVENTO DE CLICK É REFERENTE A ROTA CLICADA! -->
 					<font-awesome-icon :icon="['fas', `${item.icon}`]" />
 					<p>{{ item.description }}</p>
@@ -32,12 +26,17 @@ export default {
 	data() {
 		return {
 			dataLinks: RouterData,
+			isActive: true,
+			isInactive: false,
+			pathRouterName: this.$store.state.userStore.routerName,
 		};
 	},
 	methods: {
 		// CRIA O METODO PEGANDO O DATA
 		pickRoute(data) {
 			this.$store.state.userStore.routerName = data;
+			this.pathRouterName = data;
+			this.isActive;
 		},
 	},
 };
